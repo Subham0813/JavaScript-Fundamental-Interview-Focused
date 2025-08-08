@@ -18,9 +18,10 @@ const obj = {
     name: "subham"
 }
 
-//Lets understand the flow..
+//            Lets understand the flow..
+//    ========================================
 
-//Lets take our obj object, now if we try to access a property of our object,if the property  be found in our object then it will be returned but if its not in our object JS engine further search it inside our object's prototype, if the property still not fount, then js engine search it inside the prototype's prototype and so on utill the property found or the prototype is null which is the end of prototype chain, in that case JS return undefined.
+//Lets take our obj object, now if we try to access a property of our object,if the property  be found in our object then it will be returned but if its not in our object JS engine further search it inside our object's prototype, if the property still not found, then js engine search it inside the prototype's prototype and so on utill the property found or the prototype is null which is the end of prototype chain, in that case JS return undefined.
 
 //This behaviour is also known as protoype channing or prototypal inheritance
 
@@ -37,4 +38,6 @@ Object.prototype.toString = function(){
 } //demonstration purpose only
 
 console.log(obj.toString()) //Not recommended ,Highly dengerous ,can lead to conflicts , bugs etc.
+
+// here we're overriding the inbuilt method toString(), hence the output will be different this time tan before.
 
