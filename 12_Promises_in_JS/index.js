@@ -66,7 +66,7 @@
 //     setTimeout(() => {
 //       const user = { id: 1, name: "Subham" };
 //       resolve(user);
-//     }, 2000);
+//     }, 5000);
 //   });
 // }
 
@@ -89,44 +89,33 @@
 //   console.log("error", err);
 // }
 
-// // async function readStream() {
-// //   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
 
-// //   const reader = response.body.getReader(); // get a reader
 
-// //   console.log("reader", reader)
-// //   let decoder = new TextDecoder();
-// //   let result = "";
 
-// //   while (true) {
-// //     const { done, value } = await reader.read(); // read next chunk
-// //     if (done) break;
-// //     console.log(value)
-// //     const l= result.length
-// //     result += decoder.decode(value, { stream: true });
+
+
+// async function readStream() {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+//   const reader = response.body.getReader(); // get a reader
+
+//   console.log("reader", reader)
+//   let decoder = new TextDecoder();
+//   let result = "";
+
+//   while (true) {
+//     const { done, value } = await reader.read(); // read next chunk
+//     if (done) break;
+//     // console.log(value)
+//     const l= result.length
+//     result += decoder.decode(value, { stream: true });
     
-// //     console.log(`chunk ${result.length - l}`);
-// //     console.log("\n")
-// //   }
+//     console.log(`chunk ${result.length - l}`);
+//     console.log("\n")
+//   }
 
-// //   // console.log("Final result:", result);
-// // }
+//   // console.log("Final result:", result);
+// }
 
-// // readStream()
-
-
-
-
-//❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌
-
-const response = new Promise((resolve , reject) => 
-  resolve(() => console.log("Hello from Promise resolve"))
-)
-
-console.log(response)
-
-console.log(response.then(result => result()))
-
-
-
+// readStream()
 
